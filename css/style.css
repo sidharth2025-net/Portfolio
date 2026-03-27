@@ -789,162 +789,80 @@ ul { list-style: none; }
 /* ===========================
    CERTIFICATIONS
 =========================== */
-.certs__grid {
+.certifications {
+  background: #020617;
+  padding: 80px 20px;
+  text-align: left;
+  color: white;
+}
+
+.section__title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* 2D Horizontal Scroll Layout */
+.slider {
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.slide-track {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  gap: 20px;
+  width: max-content;
+  padding: 10px;
 }
 
-.cert-card {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 1.5rem 2rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg-card);
-  transition: var(--transition);
+/* Hide Scrollbar (clean UI) */
+.slider::-webkit-scrollbar {
+  display: none;
 }
 
-.cert-card--achieved {
-  border-left: 3px solid var(--accent-cyan);
-}
-
-.cert-card--inprogress {
-  border-left: 3px solid var(--accent-blue);
-  opacity: 0.8;
-}
-
-.cert-card:hover {
-  background: var(--bg-card-hover);
-  transform: translateX(4px);
-}
-
-.cert-card__logo {
-  width: 80px;
-  height: 50px;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Cards */
+.slide {
+  min-width: 220px;
+  height: 220px;
+  background: #0f172a;
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
   flex-shrink: 0;
-  font-weight: 800;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
-  font-family: var(--font-mono);
+  border: 1px solid transparent;
 }
 
-.cert-card__logo.cisco {
-  background: linear-gradient(135deg, #00bceb, #1ba0d7);
-  color: white;
+/* Image */
+.slide img {
+  width: 190px;
+  height: 190px;
+  object-fit: contain;
+  margin-bottom: 12px;
 }
 
-.cert-card__logo.comptia {
-  background: linear-gradient(135deg, #cc2030, #e8384a);
-  color: white;
+/* Text */
+.slide p {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #cbd5f5;
 }
 
-.cert-card__logo.aws {
-  background: linear-gradient(135deg, #ff9900, #ffad33);
-  color: #111;
+/* Hover Effects */
+.slide:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: #1e293b;
+  border: 1px solid #38bdf8;
 }
 
-.cert-card__logo.fortinet {
-  background: linear-gradient(135deg, #e84239, #c62019);
-  color: white;
-}
-
-.cert-card__info h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.3rem;
-}
-
-.cert-card__info p {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-}
-
-.cert-status {
-  font-size: 0.8rem;
-  font-family: var(--font-mono);
-  font-weight: 600;
-}
-
-.cert-status--achieved { color: var(--accent-cyan); }
-.cert-status--inprogress { color: #60a5fa; }
-
-/* ===========================
-   EDUCATION / TIMELINE
-=========================== */
-.education { background: rgba(8, 14, 23, 0.5); }
-
-.timeline {
-  position: relative;
-  padding-left: 2rem;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--accent-cyan), var(--accent-blue), transparent);
-}
-
-.timeline__item {
-  position: relative;
-  display: grid;
-  grid-template-columns: 160px 1fr;
-  gap: 2rem;
-  margin-bottom: 3rem;
-  padding-left: 1.5rem;
-}
-
-.timeline__dot {
-  position: absolute;
-  left: -2.5rem;
-  top: 0.4rem;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: var(--accent-cyan);
-  border: 2px solid var(--bg-primary);
-  box-shadow: 0 0 10px rgba(0,245,196,0.5);
-}
-
-.timeline__date {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  color: var(--accent-cyan);
-  padding-top: 0.3rem;
-  font-weight: 700;
-  align-self: start;
-}
-
-.timeline__content h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.3rem;
-}
-
-.timeline__place {
-  display: block;
-  font-size: 0.85rem;
-  color: var(--accent-blue);
-  margin-bottom: 0.6rem;
-  font-style: italic;
-}
-
-.timeline__content p {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
+/* Optional: Center align on large screens */
+@media (min-width: 768px) {
+  .slider {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 /* ===========================
