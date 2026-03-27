@@ -890,6 +890,119 @@ ul { list-style: none; }
   .slide img {
     height: 120px;
   }
+} 
+/* ===========================
+   Experience Section
+=========================== */
+
+/* Color Variables & Base */
+:root {
+  --bg-color: #050a0f; /* Dark navy/black background */
+  --accent-color: #00ffcc; /* Neon teal for dots and dates */
+  --text-main: #ffffff;
+  --text-muted: #a0a0a0;
+  --link-blue: #3b82f6;
+}
+
+body {
+  background-color: var(--bg-color);
+  font-family: 'Inter', sans-serif; /* Use a clean sans-serif */
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.education {
+  padding: 80px 20px;
+}
+
+/* Header Styling */
+.section__tag {
+  color: var(--accent-color);
+  font-family: monospace;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin-top: 40px;
+}
+
+/* The Vertical Line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 125px; /* Aligns line between date and content */
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, var(--accent-color), #1a3a3a);
+}
+
+/* Timeline Item */
+.timeline__item {
+  position: relative;
+  display: flex;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+/* Date Styling */
+.timeline__date {
+  width: 110px;
+  text-align: right;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  padding-right: 35px;
+  margin-top: -3px; /* Fine-tune alignment with title */
+}
+
+/* The Dot */
+.timeline__dot {
+  position: absolute;
+  left: 121.5px; /* Center on the 1px line */
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-color);
+  z-index: 2;
+}
+
+/* Content Area */
+.timeline__content {
+  padding-left: 40px;
+  flex: 1;
+}
+
+.timeline__content h3 {
+  font-size: 1.25rem;
+  margin: 0 0 5px 0;
+  font-weight: 600;
+}
+
+.timeline__place {
+  display: block;
+  color: var(--link-blue);
+  font-style: italic;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.timeline__content p {
+  color: var(--text-muted);
+  max-width: 650px;
+  font-size: 0.95rem;
 }
 
 /* ===========================
