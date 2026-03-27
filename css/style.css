@@ -897,11 +897,11 @@ ul { list-style: none; }
 
 /* Color Variables & Base */
 :root {
-  --bg-color: #050a0f; /* Dark navy/black background */
-  --accent-color: #00ffcc; /* Neon teal for dots and dates */
-  --text-main: #ffffff;
-  --text-muted: #a0a0a0;
-  --link-blue: #3b82f6;
+  bg-color: #050a0f;
+  accent-color: #00ffcc;
+  text-main: #ffffff;
+  text-muted: #a0a0a0;
+  link-blue: #3b82f6;
 }
 
 body {
